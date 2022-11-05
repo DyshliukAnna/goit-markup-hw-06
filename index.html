@@ -62,9 +62,40 @@
           <button type="button" class="main-button" data-modal-open>Замовити послугу</button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-              <button class="button-modal" data-modal-close>+</button>
+              <form action="" class="contact-form">
+                <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+                <button class="button-close-modal" data-modal-close>
+                  <svg width="18" height="18" button-close-modal>
+                    <use href="./images/icons.svg#icon-close-modal "></use>
+                  </svg>  
+                </button>
+                <label  class="form-label" for="person-name">Ім'я</label>
+                <div class="form-control">
+                  <input  class="form-input" id="person-name" type="text" name="person-name">
+                  <svg class="form-icon" width="18" height="18" button-close-modal>
+                    <use href="./images/icons.svg#icon-person-modal"></use>
+                  </svg>
+                </div>
+                <label  class="form-label" for="person-name">Телефон</label>
+                <div class="form-control">
+                  <input  class="form-input" id="person-name" type="tel" name="person-name">
+                  <svg class="form-icon" width="18" height="18" button-close-modal>
+                    <use href="./images/icons.svg#icon-phone-modal"></use>
+                  </svg>
+                </div>
+                <label  class="form-label" for="person-name">Пошта</label>
+                <div class="form-control">
+                  <input  class="form-input" id="person-name" type="email" name="person-name">
+                  <svg class="form-icon" width="18" height="18" button-close-modal>
+                    <use href="./images/icons.svg#icon-email-modal"></use>
+                  </svg>
+                </div>
+                <label  class="form-label" for="person-comment">Пошта</label>
+                <textarea  class="form-textarea" id="person-comment" type="email" name="person-comment" placeholder="Введіть текст">
+                </textarea>
+              </form>
             </div>
-          </div>
+          </div> 
       </section>
       <section class="section primary-section">
         <div class="container primary-section-container">
