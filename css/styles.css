@@ -16,7 +16,7 @@
   --footer-mail-phone-color: rgba(255, 255, 255, 0.6);
   --border-color-portfolio: #eeeeee;
   --border-color-header: #ececec;
-
+  --input-border: rgba(33, 33, 33, 0.2);
   --card-portfolio-gap: 30px;
 }
 
@@ -889,6 +889,7 @@ img {
   display: flex;
   align-items: baseline;
 }
+
 /* Модальне вікно на головній сторінці. Кнопка :"Засмовити послугу" */
 
 /* Затемнення бекдропу(фону під модалкою при відкритті вікна) */
@@ -917,6 +918,7 @@ img {
 }
 
 .modal {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -930,16 +932,89 @@ img {
   background-color: var(--primary-background-color);
 }
 /* Кнопка закриття модального вікна */
-.button-modal {
+.button-close-modal {
   position: absolute;
   top: 8px;
   right: 8px;
+  padding: 4px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 30px;
   height: 30px;
 
+  fill: var(--accent-color);
   background-color: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transform: rotate(45deg);
+
+  cursor: pointer;
+  outline: none;
+  /* transform: rotate(45deg); */
+}
+.button-close-modal:hover {
+  border-color: var(--icons-hover-color);
+}
+.button-close-modal:focus {
+  border-color: var(--accent-color);
+}
+
+/*Оформлення модального вікна. Заповнення інпутами */
+.form-input {
+  height: 40px;
+  width: 100%;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.contact-form {
+  display: block;
+
+  width: 100%;
+  padding: 40px 39px 40px 41px;
+}
+
+.form-control {
+  position: relative;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 14px 15px 14px 30px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  outline: none;
+}
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+.form-input:focus + .form-icon {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: currentColor;
+}
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  text-align: start;
+
+  color: var(--secondary-color);
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  letter-spacing: 0.01em;
 }
