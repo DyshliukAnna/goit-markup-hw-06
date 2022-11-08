@@ -879,9 +879,11 @@ img {
 .net-text {
   display: flex;
   margin-bottom: 20px;
+  font-size: 14px;
 
   font-weight: 700;
   line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--hero-color);
@@ -1161,6 +1163,7 @@ label {
   width: 100%;
   color: var(--hero-color);
 
+  font-size: 14px;
   font-weight: 700;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
