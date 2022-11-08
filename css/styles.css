@@ -975,6 +975,8 @@ img {
   margin-bottom: 12px;
 }
 .contact-form {
+  position: absolute;
+  z-index: 2;
   display: block;
   width: 100%;
   padding: 40px 39px 40px 41px;
