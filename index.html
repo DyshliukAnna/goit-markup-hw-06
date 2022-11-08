@@ -102,15 +102,13 @@
                   </textarea>
                 </div>
                 <div class="form-field-checkbox">
-                  <div class="form-control">
-                    <label class="checkbox-label" for="terms-checkbox">Погоджуюся з розсилкою та приймаю
-                      <a href="#"> Умови договору</a>
-                    </label>
-                    <input class="checkbox-input visually-hidden" id="terms-checkbox" type="checkbox" name="terms-checkbox">
-                    <svg class="form-icon-checkbox" width="16" height="15" button-close-modal>
-                      <use href="./images/icons.svg#icon-check-modal"></use>
-                    </svg>
-                  </div>
+                  <input class="checkbox-input visually-hidden" id="terms-checkbox" type="checkbox" name="terms-checkbox">
+                  <svg class="form-icon-checkbox" width="16" height="15" button-close-modal>
+                    <use href="./images/icons.svg#icon-check-modal"></use>
+                  </svg>
+                  <label class="checkbox-label" for="terms-checkbox">Погоджуюся з розсилкою та приймаю
+                    <a  class="checkbox-link" href="#"> Умови договору</a>
+                  </label>
                 </div>
                 <button type="submit" class="main-button form-button">Відправити</button>
               </form>
@@ -482,11 +480,17 @@
           </ul>
         </div>
         <form class="form-footer">
-          <label for="form-follow-footer"> Підпишіться на розсилку</label>
-          <div class="">
+          <label class="label-form-footer" for="form-follow-footer"> Підпишіться на розсилку</label>
+          <div class="field-form-footer">
             <input  class="form-follow-footer" type="email" id="form-follow-footer" name="email" placeholder="E-mail">
+            <button class=" button-footer" type="submit">Підписатися
+              <svg class="button-footer-icon" width="24" height="24px">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button></div>
+          <div class="field-button-footer">
+            
           </div>
-          <button class="button-footer" type="submit">Підписатися</button>
         </form>
       </div>
     </footer>
