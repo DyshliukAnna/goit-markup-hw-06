@@ -961,10 +961,6 @@ img {
 }
 
 /*Оформлення модального вікна. Заповнення інпутами */
-.form-input {
-  height: 40px;
-  width: 100%;
-}
 
 .modal-title {
   font-weight: 700;
@@ -976,7 +972,6 @@ img {
 }
 .contact-form {
   display: block;
-
   width: 100%;
   padding: 40px 39px 40px 41px;
 }
@@ -986,12 +981,13 @@ img {
 }
 .form-input {
   display: block;
+  height: 40px;
   width: 100%;
   padding: 14px 15px 14px 30px;
   border: 1px solid var(--input-border);
   border-radius: 4px;
   outline: none;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .form-input:focus {
   border-color: var(--accent-color);
@@ -1020,6 +1016,14 @@ img {
   letter-spacing: 0.01em;
   margin-bottom: 4px;
 }
+
+.form-field {
+  margin-bottom: 10px;
+}
+.form-field-textarea {
+  margin-bottom: 20px;
+}
+
 .form-textarea {
   width: 100%;
   padding: 12px 16px;
@@ -1027,10 +1031,17 @@ img {
   border-radius: 4px;
   outline: none;
   height: 120px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+}
+.form-textarea:focus {
+  border-color: var(--accent-color);
 }
 
 /* Checkbox */
+.form-field-checkbox {
+  margin-bottom: 30px;
+}
+
 .checkbox-input {
   display: block;
   appearance: none;
@@ -1042,7 +1053,7 @@ img {
   display: block;
   text-align: left;
   padding-left: 33px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .checkbox-label::before {
@@ -1054,35 +1065,35 @@ img {
   width: 16px;
   height: 15px;
 
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--primary-color);
   border-radius: 2px;
+  opacity: 1;
 }
 
-.checkbox-label::after {
+.form-icon-checkbox {
   display: inline-flex;
-  content: '';
   position: absolute;
-  top: 20px;
+  top: 0px;
   left: 13px;
+  padding: 4px 2px 3px 3px;
 
   width: 16px;
   height: 15px;
 
-  background-image: url('../images/icons.svg#icon-person-modal');
-
-  /* background-image: url(../images/icons.svg#icon-email-modal); */
-  border: 1px solid red;
   border-radius: 2px;
-  background-color: var();
-  z-index: 2;
-  opacity: 1;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: var(--accent-color);
+  opacity: 0;
+  z-index: -1;
 }
 
-.checkbox-input:checked + .checkbox-label::after {
-  color: #2196f3;
+.checkbox-input:checked + .form-icon-checkbox {
+  background-color: #2196f3;
+  fill: #188ce8;
   opacity: 1;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  opacity: 0;
 }
 
 .form-button {
@@ -1093,4 +1104,21 @@ img {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
+}
+
+/* Форма в Футері */
+.form-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.button-footer {
+  position: absolute;
+  left: 12px;
+}
+
+label,
+input {
+  margin: 0;
+  padding: 0;
 }
