@@ -17,6 +17,7 @@
   --border-color-portfolio: #eeeeee;
   --border-color-header: #ececec;
   --input-border: rgba(33, 33, 33, 0.2);
+  --input-placeholder-footer: rgba(255, 255, 255, 0.6);
   --card-portfolio-gap: 30px;
 }
 
@@ -324,7 +325,7 @@ img {
   color: var(--hero-color);
   background-color: var(--accent-background-color);
 
-  outline: none;
+  /* outline: none; */
 }
 
 /* Секція:"Наші переваги"  */
@@ -868,6 +869,7 @@ img {
   width: 206px;
   height: 80px;
   align-items: flex-start;
+  margin-right: 93px;
 }
 
 .footer-nav {
@@ -983,7 +985,7 @@ img {
   display: block;
   height: 40px;
   width: 100%;
-  padding: 14px 15px 14px 30px;
+  padding: 14px 15px 14px 42px;
   border: 1px solid var(--input-border);
   border-radius: 4px;
   outline: none;
@@ -1031,8 +1033,15 @@ img {
   border-radius: 4px;
   outline: none;
   height: 120px;
+  resize: none;
   /* margin-bottom: 20px; */
 }
+.form-textarea::placeholder {
+  display: block;
+  color: rgba(117, 117, 117, 0.5);
+  z-index: 2;
+}
+
 .form-textarea:focus {
   border-color: var(--accent-color);
 }
@@ -1040,12 +1049,13 @@ img {
 /* Checkbox */
 .form-field-checkbox {
   margin-bottom: 30px;
+  position: relative;
 }
 
 .checkbox-input {
   display: block;
   appearance: none;
-  text-align: start;
+  text-align: center;
 }
 
 .checkbox-label {
@@ -1053,46 +1063,62 @@ img {
   display: block;
   text-align: left;
   padding-left: 33px;
+
+  color: var(--secondary-color);
+
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
   /* margin-bottom: 30px; */
+}
+.checkbox-link {
+  color: var(--accent-color);
 }
 
 .checkbox-label::before {
+  display: flex;
   content: '';
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 13px;
 
+  align-items: center;
   width: 16px;
   height: 15px;
 
   border: 1px solid var(--primary-color);
   border-radius: 2px;
   opacity: 1;
+  background-origin: border-box;
 }
 
 .form-icon-checkbox {
   display: inline-flex;
   position: absolute;
-  top: 0px;
+  top: 4px;
   left: 13px;
   padding: 4px 2px 3px 3px;
 
   width: 16px;
   height: 15px;
 
-  border-radius: 2px;
+  border: 1px;
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
+
+  background-origin: border-box;
   opacity: 0;
-  z-index: -1;
 }
 
 .checkbox-input:checked + .form-icon-checkbox {
+  border: 2px;
+  border-color: var(--accent-color);
+  background-origin: border-box;
   background-color: #2196f3;
   fill: #188ce8;
   opacity: 1;
 }
 
-.checkbox-input:checked + .checkbox-label::before {
+.checkbox-input:checked ~ .checkbox-label::before {
   opacity: 0;
 }
 
@@ -1111,14 +1137,85 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: baseline;
+}
+
+.field-form-footer {
+  position: relative;
+}
+
+/* .button-footer {
+  position: absolute;
+  left: 12px;
+} */
+
+label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.label-form-footer {
+  display: block;
+  width: 100%;
+  color: var(--hero-color);
+
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-follow-footer {
+  position: relative;
+  display: block;
+  min-width: 358px;
+  min-height: 50px;
+  color: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: inherit;
+}
+.form-follow-footer::placeholder {
+  padding-left: 16px;
+  color: var(--input-placeholder-footer);
 }
 .button-footer {
   position: absolute;
-  left: 12px;
+  left: 100%;
+  top: 0;
+  transform: translatex(12px);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  max-width: 200px;
+  padding: 10px 28px;
+  border-radius: 4px;
+  border: 0px;
+  color: var(--hero-color);
+  background-color: var(--accent-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+}
+.button-footer:hover,
+.button-footer:focus {
+  color: var(--hero-color);
+  background-color: var(--accent-background-color);
 }
 
-label,
-input {
-  margin: 0;
-  padding: 0;
+.button-footer-icon {
+  padding-left: 10px;
+  fill: var(--hero-color);
 }
