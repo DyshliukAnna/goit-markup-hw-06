@@ -948,7 +948,7 @@ img {
   width: 30px;
   height: 30px;
 
-  fill: var(--accent-color);
+  fill: #000000;
   background-color: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -958,10 +958,10 @@ img {
   /* transform: rotate(45deg); */
 }
 .button-close-modal:hover {
-  border-color: var(--icons-hover-color);
+  fill: var(--icons-hover-color);
 }
 .button-close-modal:focus {
-  border-color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /*Оформлення модального вікна. Заповнення інпутами */
@@ -1129,9 +1129,21 @@ img {
   height: 50px;
   padding: 10px 52px;
 
+  color: var(--hero-color);
+  background-color: var(--accent-color);
+
+  border: 0;
+  border-radius: 4px;
+
+  font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Форма в Футері */
