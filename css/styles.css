@@ -1224,6 +1224,9 @@ label {
 }
 
 .button-footer-icon {
+  display: block;
   padding-left: 10px;
   fill: var(--hero-color);
+  width: 24px;
+  height: 24px;
 }
