@@ -955,7 +955,6 @@ img {
 
   cursor: pointer;
   outline: none;
-  /* transform: rotate(45deg); */
 }
 .button-close-modal:hover {
   fill: var(--icons-hover-color);
@@ -993,7 +992,6 @@ img {
   border: 1px solid var(--input-border);
   border-radius: 4px;
   outline: none;
-  /* margin-bottom: 10px; */
 }
 .form-input:focus {
   border-color: var(--accent-color);
@@ -1038,12 +1036,15 @@ img {
   outline: none;
   height: 120px;
   resize: none;
-  /* margin-bottom: 20px; */
 }
 .form-textarea::placeholder {
+  position: relative;
   display: block;
   color: rgba(117, 117, 117, 0.5);
-  z-index: 2;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  z-index: 3;
 }
 
 .form-textarea:focus {
@@ -1159,11 +1160,6 @@ img {
 .field-form-footer {
   position: relative;
 }
-
-/* .button-footer {
-  position: absolute;
-  left: 12px;
-} */
 
 label {
   display: flex;
