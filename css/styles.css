@@ -11,6 +11,7 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303f;
   --svg-background-color: #f5f4fa;
+  --svg-net-color: #afb1b8;
   --image-background-color: rgba(47, 48, 58, 0.8);
   --modal-background-color: rgba(0, 0, 0, 0.2);
   --footer-mail-phone-color: rgba(255, 255, 255, 0.6);
@@ -619,10 +620,6 @@ img {
   text-decoration: none;
 }
 
-.title-item-card:hover {
-  text-decoration: underline;
-}
-
 .item-prtfolio-flexpart {
   padding: 20px 24px;
   border-right: 1px solid var(--border-color-portfolio);
@@ -637,9 +634,6 @@ img {
   line-height: calc(30 / 16);
   text-decoration: none;
 }
-.project-description:hover {
-  text-decoration: underline;
-}
 
 .link-decoration-portfolio {
   position: relative;
@@ -653,6 +647,11 @@ img {
 .link-decoration-portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.link-decoration-portfolio:hover .overlay-text-decoration,
+.link-decoration-portfolio:focus .overlay-text-decoration {
+  transform: translateY(0%);
 }
 
 /* Абсолютне позиціонрування оверлею з текстом на картках на сторінці Портфоліо*/
@@ -682,9 +681,9 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.thumb-card:hover .overlay-text-decoration {
+/* .thumb-card:hover .overlay-text-decoration {
   transform: translateY(0%);
-}
+} */
 
 /* Секція Постійні клієнти */
 
@@ -827,7 +826,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--secondary-color);
+  color: var(--svg-net-color);
   align-items: center;
 
   justify-content: center;
@@ -838,14 +837,10 @@ img {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-net:hover {
-  background-color: var(--accent-color);
-  color: var(--hero-color);
-  fill: currentColor;
-}
+.link-net:hover,
 .link-net:focus {
   background-color: var(--accent-color);
-  color: var(--accent-color);
+  color: var(--hero-color);
   fill: currentColor;
 }
 
